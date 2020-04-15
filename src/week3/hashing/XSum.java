@@ -6,7 +6,7 @@ public class XSum {
 
 	public static void main(String[] args) {
 		
-		int arr[]={5,3,8,-2,8,10};
+		int arr[]={5,8,-2,8,10};
 		int x=11;
 		
 		boolean res=sum11(arr,x);

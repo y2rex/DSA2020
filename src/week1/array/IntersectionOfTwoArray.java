@@ -4,8 +4,8 @@ public class IntersectionOfTwoArray {
 
 	public static void main(String[] args) 
 	{
-		 	int arr1[] = {1, 2, 4, 5, 6}; 
-	        int arr2[] = {2, 3, 5, 7}; 
+		 	int arr1[] = {1, 2,3,3, 4, 5, 6}; 
+	        int arr2[] = {2, 3,3, 5, 7}; 
 	        int m = arr1.length; 
 	        int n = arr2.length; 	
 	        
@@ -28,6 +28,7 @@ public class IntersectionOfTwoArray {
 			{
 				System.out.println(arr1[i]+" ");
 				i++;
+				//j++;
 			}
 		}
 		

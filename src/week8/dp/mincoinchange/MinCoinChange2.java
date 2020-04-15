@@ -30,7 +30,7 @@ public class MinCoinChange2 {
 	//initializing first row	
 				else if(i==0)
 				{
-					if(i%coin==0)
+					if(j%coin==0)
 						dp[i][j]=j/coin;
 					else
 						dp[i][j]=0;

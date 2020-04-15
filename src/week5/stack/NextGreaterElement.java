@@ -25,10 +25,9 @@ public class NextGreaterElement {
 		{
 			if(st.peek()>arr[i])
 				next[i]=st.peek();
-			
 			else
 			{
-				while(!st.isEmpty() && st.peek()<arr[i])
+				while(!st.isEmpty() && arr[i]>st.peek())
 					st.pop();
 				next[i]=st.isEmpty()?-1:st.peek();
 			}

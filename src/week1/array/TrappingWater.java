@@ -18,20 +18,15 @@ public class TrappingWater {
 			int l=i,r=i;
 			
 			while(l>=0){
-				if(arr[l]>left)
-					left=arr[l];
+				left=Math.max(left, arr[l]);
 				l--;
 			}
 			while(r<n){
-				if(arr[r]>right)
-					right=arr[r];
+				right=Math.max(right, arr[r]);
 				r++;
 			}
-//===========min(left,right)=============
-			if(left>right)
-				left=right;
 			
-		sum=sum+left-arr[i];
+		sum+=Math.min(left,right)-arr[i];
 		}
 		System.out.println(sum);
 	}

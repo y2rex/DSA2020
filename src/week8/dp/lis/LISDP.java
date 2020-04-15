@@ -16,9 +16,6 @@ public class LISDP {
 	private static int lis(int[] arr, int n) 
 	{
 		int lis[]=new int[n];
-		/*for(int i=0;i<n;i++)
-			lis[i]=1;*/
-		
 		for(int i=0;i<n;i++)
 		{
 			lis[i]=1;		//initializing the lis array
@@ -32,6 +29,23 @@ public class LISDP {
 		for(int a : lis)
 			if(a>res)
 				res=a;
+		
+		/*int res=0;
+		for(int i=0;i<n;i++)
+		{
+			int temp=arr[i];
+			int t=1;
+			for(int j=i;j<n;j++)
+			{
+				if(arr[j]>temp)
+				{
+					t++;
+					temp=arr[j];
+				}
+			}
+			res=Math.max(t, res);
+		}*/
+		
 		
 		return res;
 	}

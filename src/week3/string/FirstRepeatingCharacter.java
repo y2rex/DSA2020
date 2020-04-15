@@ -10,7 +10,6 @@ public class FirstRepeatingCharacter {
 	public static void main(String[] args) {
 		String str="zgeeksforgzaeeks";
 		first(str);
-
 	}
 
 	private static void first(String str) {

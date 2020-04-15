@@ -20,7 +20,20 @@ public class BinarySearch {
 		if(arr[mid]>x)
 			return sort(arr,start,mid-1,x);
 		
-		return 0;
+		return -1;
+		
+		/*while(start<=end)
+		{
+			int mid=(start+end)/2;
+			if(arr[mid]==x)
+				return mid;
+			else if(arr[mid]<x)
+				start=mid+1;
+			else
+				end=mid-1;
+		}
+		return -1;*/
+		
 	}
 
 }

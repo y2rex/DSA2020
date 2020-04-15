@@ -16,24 +16,21 @@ public class BinarySearch2 {
 		if(arr[i]==x)
 			return 0;
 		i++;
-		if(arr[i]==x)
-			return 1;
 		while(arr[i]<x)
 			i*=2;
-		
 		int start=i/2;
 		int end=i;
-		
-		while(start<=end)
+		while(start<end)
 		{
-			int mid=(start+end)/2;
+			int mid=start+(end-start)/2;
 			if(arr[mid]==x)
 				return mid;
-			else if(arr[mid]>x)
-				end=mid-1;
-			else
+			else if( arr[mid]<x)
 				start=mid+1;
+			else
+				end=mid-1;
 		}
+		
 		
 		return 0;
 	}

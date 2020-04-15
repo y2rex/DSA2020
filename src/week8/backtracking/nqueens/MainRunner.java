@@ -28,11 +28,11 @@ public class MainRunner {
 		
 		for(int row=0;row<n;row++)
 		{
-			if(isSafe(chessBoard,row,col)==true)
+			if(isSafe(chessBoard,row,col))
 			{
 				chessBoard[row][col]=1;
 				
-				if(getSol(chessBoard, col+1)==true)
+				if(getSol(chessBoard, col+1))
 					return true;
 				chessBoard[row][col]=0;
 			}

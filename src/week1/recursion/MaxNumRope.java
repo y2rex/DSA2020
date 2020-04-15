@@ -23,7 +23,7 @@ public class MaxNumRope {
 		its showing already it cut in one part thats why in return we added +1 */
 		
 //========max(ca,cb,cc)============
-		int res=(ca>cb)?(ca>cc?ca:cc):(cb>cc?cb:cc);
+		int res=Math.max(Math.max(ca, cb), cc);
 		if(res==-1)
 			return -1;
 		else

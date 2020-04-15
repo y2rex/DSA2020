@@ -25,7 +25,7 @@ public class SpiralTraversal {
 			for(i=sr;i<lr;i++)
 				System.out.print(arr[i][lc-1]+" ");
 			lc--;
-	//=======remaining elements in last low============	
+	//=======remaining elements in last row============	
 			if(sr<lr){
 				for(i=lc-1;i>=sc;i--)
 					System.out.print(arr[lr-1][i]+" ");

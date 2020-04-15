@@ -9,8 +9,8 @@ public class PossibleSubset {
 	}
 
 	private static void subset(String str, int index, String curr_set) {
-		int n=str.length();
-		if(index==n)
+
+		if(index==str.length())
 		{
 			System.out.println(curr_set);
 			return;

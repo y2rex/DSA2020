@@ -64,16 +64,12 @@ public class LinkedList {
 	
 	public void midElementFast() {
 		Node slow=head,fast=head;
-		while(fast!=null&&fast.next!=null)
-		{	
+		while(fast.next!=null && fast.next.next!=null)
+		{
+			slow=slow.next;
 			fast=fast.next.next;
-	/*
-	 * this if loop applied only to maintain 
-	 * for even number of inputs
-	 * */		
-			if(fast!=null)
-				slow=slow.next;
 		}
+		
 		System.out.println(slow.data);
 	}
 

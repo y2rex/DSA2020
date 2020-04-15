@@ -14,27 +14,28 @@ public class Sort012 {
 	private static void sort(int[] arr, int high) {
 
 		int low=0;
-		int mid=0;
-		while(mid<=high){
-			switch (arr[mid]) {
+		int t=0;
+		while(low<=high)
+		{
+			switch (arr[low]) {
 			case 0:
-				int temp=arr[low];
-				arr[low]=arr[mid];
-				arr[mid]=temp;
+				int temp1=arr[low];
+				arr[low]=arr[t];
+				arr[t]=temp1;
+				t++;
 				low++;
-				mid++;
-				break;
+			    break;
 
 			case 1:
-				mid++;
+				low++;
 				break;
 				
 			case 2:
-				int temp1=arr[mid];
-				arr[mid]=arr[high];
-				arr[high]=temp1;
+				int temp2=arr[high];
+				arr[high]=arr[low];
+				arr[low]=temp2;
 				high--;
-				break;
+				break;	
 			}
 		}
 		

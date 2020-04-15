@@ -25,7 +25,7 @@ public class LCSDP {
 					dp[i][j]=dp[i-1][j-1]+1;
 				
 				else
-					dp[i][j]=Integer.max(dp[i][j-1],dp[i-1][j]);
+					dp[i][j]=Math.max(dp[i][j-1],dp[i-1][j]);
 			}
 		}
 		

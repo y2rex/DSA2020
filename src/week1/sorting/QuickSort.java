@@ -3,7 +3,7 @@ package week1.sorting;
 public class QuickSort {
 
 	public static void main(String[] args) {
-		int arr[]={6,3,7,8,45,4,3,3,3,3};
+		int arr[]={6,3,7,8,45,4};
 		quickSort(arr,0,arr.length-1);
 		for(int a: arr)
 			System.out.print(a+" ");
@@ -25,12 +25,12 @@ public class QuickSort {
         
 		int pivot=arr[high];
         
-		for(int j=low;j<=high-1;j++)
+		for(int j=low;j<high;j++)
 		{
 			if(arr[j]<=pivot)
 			{
 				i++;
-				      //swap arr[i] & arr[j]
+		     //swap arr[i] & arr[j]
 				int temp=arr[i];
 				arr[i]=arr[j];
 				arr[j]=temp;

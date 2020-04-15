@@ -9,7 +9,7 @@ public class LastRepeatingCharacter {
 	}
 
 	private static void last(String str) {
-		int res=-2;
+		int res=Integer.MIN_VALUE;
 		int count[]=new int[256];
 		
 		for(int i=0;i<str.length();i++)

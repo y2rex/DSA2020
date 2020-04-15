@@ -27,13 +27,9 @@ public class Diameter
 	{
 		if(root==null)
 			return 0;
-		int lHeight=height(root.left);
-		int rHeight=height(root.right);
 		
-		int lDiameter=diameter(root.left);
-		int rDiameter=diameter(root.right);
-		
-		return Math.max(lHeight+rHeight+1, Math.max(lDiameter, rDiameter));
+		return Math.max(Math.max(diameter(root.left), diameter(root.right)), 
+						height(root.left)+height(root.right)+1);
 	}
 
 

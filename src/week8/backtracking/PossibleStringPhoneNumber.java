@@ -47,18 +47,18 @@ class PossibleStringPhoneNumber
   public static void util(int a[],HashMap<Integer,char[]> lettersMap, String str,List<String> result )
   {
   	
-  	 if(a.length==str.length())
-      {
-          result.add(str);
-          return;
-      }
-      
-      for(char ch : lettersMap.get(a[str.length()]))
-      {
-          str=str+ch;
-          util(a,lettersMap,str,result);
-          str=str.substring(0,str.length()-1);
-      }
+  	if(str.length()==a.length)
+  	{
+  		result.add(str);
+  		return;
+  	}
+  	
+  	for(char ch: lettersMap.get(a[str.length()]))
+  	{
+  		str+=ch;
+  		util(a, lettersMap, str, result);;
+  		str=str.substring(0, str.length()-1);
+  	}
   }
   
   

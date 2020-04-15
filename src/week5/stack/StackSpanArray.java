@@ -1,5 +1,7 @@
 package week5.stack;
 
+import java.util.Stack;
+
 public class StackSpanArray {
 
 	public static void main(String[] args) {
@@ -35,26 +37,27 @@ private static void spanMethod2(int[] prices)
 
 //***********1st solution : Naive Method*******(O(n2))***********	
 	private static void spanMethod(int[] prices) {
-		int l=0;
-		int res[]=new int[prices.length];
+		int n=prices.length;
+		int stock[]=new int[n];
+		stock[0]=1;
+		Stack<Integer> st=new Stack<Integer>();
+		st.push(0);
 		
-		for(int i=prices.length-1;i>0;i--)
+		for(int i=1;i<n;i++)
 		{
-				int temp=prices[i];
-				int count=1;
-				int j=i-1;
-				
-				while(j>=0&&prices[j]<temp){
-					count++;
-					j--;
-				}
-					res[l++]=count;
+			if(prices[st.peek()]>prices[i])
+				stock[i]=i-st.peek();
+			else
+			{
+				while(!st.isEmpty() && prices[i]>prices[st.peek()])
+					st.pop();
+				stock[i]=st.isEmpty()?i+1:i-st.peek();
+			}
+			st.push(i);
 		}
-		res[l]=1;//for leftmost element
 		
-		while(l>=0)
-			System.out.print(res[l--]+" ");	
-		
+		for(int a : stock)
+			System.out.print(a+" ");
 	}
 
 }
